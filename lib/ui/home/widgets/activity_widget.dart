@@ -1,3 +1,5 @@
+import 'package:aircheck/app/app_icons.dart';
+import 'package:aircheck/app/strings.dart';
 import 'package:flutter/material.dart';
 
 enum ActivityType { walking, running, biking }
@@ -45,13 +47,13 @@ class ActivityWidget extends StatelessWidget {
         return Container(
           width: _Constants.badgeSize,
           height: _Constants.badgeSize,
-          child: Image.asset("assets/images/icon_good.png"),
+          child: Image.asset(AppIcons.good),
         );
       case ActivityQuality.bad:
         return Container(
           width: _Constants.badgeSize,
           height: _Constants.badgeSize,
-          child: Image.asset("assets/images/icon_warning.png"),
+          child: Image.asset(AppIcons.warning),
         );
     }
     return Container();
@@ -111,11 +113,11 @@ class ActivityWidget extends StatelessWidget {
   Image _imageForActivityType(ActivityType activityType) {
     switch (activityType) {
       case ActivityType.walking:
-        return Image.asset("assets/images/icon_walking.png");
+        return Image.asset(AppIcons.walking);
       case ActivityType.running:
-        return Image.asset("assets/images/icon_run.png");
+        return Image.asset(AppIcons.run);
       case ActivityType.biking:
-        return Image.asset("assets/images/icon_cycle.png");
+        return Image.asset(AppIcons.cycle);
     }
 
     return null;
@@ -124,11 +126,11 @@ class ActivityWidget extends StatelessWidget {
   String _titleForActivityType(ActivityType activityType) {
     switch (activityType) {
       case ActivityType.walking:
-        return "Walking";
+        return Strings.activityWalking;
       case ActivityType.running:
-        return "Running";
+        return Strings.activityRunning;
       case ActivityType.biking:
-        return "Biking";
+        return Strings.activityBiking;
     }
 
     return null;

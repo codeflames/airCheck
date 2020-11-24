@@ -1,3 +1,4 @@
+import 'package:aircheck/app/app_theme.dart';
 import 'package:aircheck/ui/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +8,7 @@ class AirCheck extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: AppThemeDataFactory.prepareThemeData(),
       home: HomePage(title: 'Flutter Demo Home Page'),
     );
   }
